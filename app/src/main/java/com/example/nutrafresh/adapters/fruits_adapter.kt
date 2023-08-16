@@ -1,5 +1,6 @@
 package com.example.nutrafresh.adapters
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
@@ -49,6 +50,7 @@ class fruits_adapter(var context: Context) :
         return url_list.size
     }
 }
+
 fun setDialog(context: Context, ft1Name: String, ft1Desc: String, ft1Image: String) {
     val alertadd = AlertDialog.Builder(context)
     val factory = LayoutInflater.from(context)
@@ -56,11 +58,19 @@ fun setDialog(context: Context, ft1Name: String, ft1Desc: String, ft1Image: Stri
     var ft_img=view1.findViewById<ImageView>(R.id.ft_img)
     var ft_name=view1.findViewById<TextView>(R.id.ft_name)
     var ft_desc=view1.findViewById<TextView>(R.id.ft_desc)
+    var bt_ok=view1.findViewById<TextView>(R.id.button_okk)
+
     ft_img.setImageResource(R.drawable.baseline_menu_24)
     ft_name.text=ft1Name
     ft_desc.text=ft1Desc
+    bt_ok.text="    \n    OK"
+    bt_ok.setOnClickListener {
+       alertadd.setOnDismissListener {
+           alertadd.setCancelable(true)
+       }
+    }
     alertadd.setView(view1)
-    alertadd.setNegativeButton("OK", DialogInterface.OnClickListener { dialog, which ->
+    alertadd.setPositiveButton("OK",{ dialog, which ->
         dialog.dismiss()
     })
     alertadd.show()

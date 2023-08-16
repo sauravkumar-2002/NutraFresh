@@ -24,14 +24,14 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
                 <ImageView
                     android:id="@+id/logo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
                     android:layout_gravity="left"
-                    android:src="@drawable/baseline_menu_24"/>
+                    android:src="@drawable/logo"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Heyy, Saurav"
+                    android:text=" Heyy, Saurav"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
@@ -89,7 +89,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="Open Camera"
+                                android:text="Open \nCamera"
                                 android:textAlignment="center"
                                 android:textColor="#070931"
                                 android:textSize="20sp"
@@ -115,7 +115,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="Open Gallery"
+                                android:text="Open \nGallery"
                                 android:textAlignment="center"
                                 android:textColor="#070931"
                                 android:textSize="20sp"

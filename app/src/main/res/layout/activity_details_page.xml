@@ -43,13 +43,22 @@
                     android:id="@+id/ft_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fruit desc"
+
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
-            </LinearLayout>
 
+            </LinearLayout>
+            <TextView
+                android:id="@+id/button_okk"
+                android:layout_marginTop="43dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textSize="17dp"
+                android:textColor="@color/purple_700"
+                android:text="    \n    OK"/>
 
         </LinearLayout>
     </ScrollView>
