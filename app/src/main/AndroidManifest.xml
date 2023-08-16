@@ -12,6 +12,15 @@
         android:theme="@style/Theme.NutraFresh"
         tools:targetApi="31">
         <activity
+            android:name=".frshness_page"
+            android:exported="false" />
+        <activity
+            android:name=".details_page"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.dashboard"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
