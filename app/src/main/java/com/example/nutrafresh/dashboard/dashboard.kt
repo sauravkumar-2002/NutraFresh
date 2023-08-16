@@ -12,10 +12,10 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityCompat
@@ -24,7 +24,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nutrafresh.R
 import com.example.nutrafresh.adapters.fruits_adapter
+import com.example.nutrafresh.frshness_page
 import com.example.nutrafresh.models.url_model
+import com.example.nutrafresh.your_profile
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.io.ByteArrayOutputStream
 import java.io.FileDescriptor
 import java.io.IOException
 
@@ -36,8 +40,16 @@ class dashboard : AppCompatActivity() {
     lateinit var layoutManager: LinearLayoutManager
     lateinit var adapter: fruits_adapter
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+        var profile=findViewById<ImageView>(R.id.my_profile)
+
+
+        profile.setOnClickListener {
+            var intent = Intent(this, your_profile::class.java)
+            startActivity(intent)
+        }
         var recv=findViewById<RecyclerView>(R.id.recv)
         loadRecView(recv);
         var camera=findViewById<CardView>(R.id.camera)
@@ -66,6 +78,9 @@ Log.i("check","on create")
             startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE)
         })
     }
+
+
+
 
     var image_uri: Uri? = null
     private val RESULT_LOAD_IMAGE = 123
@@ -119,11 +134,15 @@ Log.i("check","on create")
         var ft_img=view1.findViewById<ImageView>(R.id.ft_img)
         // var ft_name=view1.findViewById<TextView>(R.id.ft_name)
         var bt_ok=view1.findViewById<TextView>(R.id.button_okk)
-        bt_ok.text="Confirm?\n"
+        bt_ok.text="Confirm for test?\n"
         bt_ok.setOnClickListener {
-            alertadd.setOnDismissListener {
-                alertadd.setCancelable(true)
-            }
+                var intent = Intent(this, frshness_page::class.java)
+            val stream = ByteArrayOutputStream()
+            bitmap!!.compress(Bitmap.CompressFormat.PNG, 100, stream)
+            val byteArray = stream.toByteArray()
+            intent.putExtra("image", byteArray)
+                startActivity(intent)
+
         }
         ft_img.setImageBitmap(bitmap)
         //ft_name.text=ft1Name
