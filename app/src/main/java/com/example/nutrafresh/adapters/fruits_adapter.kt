@@ -36,8 +36,8 @@ class fruits_adapter(var context: Context) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.ft1Name.text = url_list[position].ft1_name
-        holder.ft2Name.text = url_list[position].ft2_name
+//        holder.ft1Name.text = url_list[position].ft1_name
+//        holder.ft2Name.text = url_list[position].ft2_name
         holder.ft1.setOnClickListener {
             setDialog(context,url_list[position].ft1_name,url_list[position].ft1_desc,url_list[position].ft1_image)
         }
@@ -55,14 +55,10 @@ fun setDialog(context: Context, ft1Name: String, ft1Desc: String, ft1Image: Stri
     val alertadd = AlertDialog.Builder(context)
     val factory = LayoutInflater.from(context)
     val view1: View = factory.inflate(R.layout.activity_details_page, null)
-    var ft_img=view1.findViewById<ImageView>(R.id.ft_img)
-    var ft_name=view1.findViewById<TextView>(R.id.ft_name)
-    var ft_desc=view1.findViewById<TextView>(R.id.ft_desc)
+
     var bt_ok=view1.findViewById<TextView>(R.id.button_okk)
 
-    ft_img.setImageResource(R.drawable.baseline_menu_24)
-    ft_name.text=ft1Name
-    ft_desc.text=ft1Desc
+
     bt_ok.text="    \n    OK"
     bt_ok.setOnClickListener {
        alertadd.setOnDismissListener {
