@@ -40,7 +40,7 @@
                     android:id="@+id/ft_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
+                    android:text="Lorem.....epsum....................\n.........................."
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
@@ -61,8 +61,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|bottom"
                 android:layout_margin="16dp"
+
                 android:contentDescription="Test another stuff"
-                android:src="@android:drawable/ic_dialog_email"
+                android:src="@android:drawable/ic_menu_add"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

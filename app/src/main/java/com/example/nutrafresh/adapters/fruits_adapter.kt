@@ -55,6 +55,20 @@ fun setDialog(context: Context, ft1Name: String, ft1Desc: String, ft1Image: Stri
     val alertadd = AlertDialog.Builder(context)
     val factory = LayoutInflater.from(context)
     val view1: View = factory.inflate(R.layout.activity_details_page, null)
+    var img=view1.findViewById<ImageView>(R.id.ft_img)
+    var name=view1.findViewById<TextView>(R.id.ft_name)
+    var desc=view1.findViewById<TextView>(R.id.ft_desc)
+    if(ft1Image=="f1_img"){
+        img.setImageResource(R.drawable.apple)
+        name.text="Apple"
+        desc.text="Lorem ......................\n............"
+
+    }
+    if(ft1Image=="f2_img"){
+        img.setImageResource(R.drawable.orange)
+        name.text="Orange"
+        desc.text="Lorem ......................\n............"
+    }
 
     var bt_ok=view1.findViewById<TextView>(R.id.button_okk)
 

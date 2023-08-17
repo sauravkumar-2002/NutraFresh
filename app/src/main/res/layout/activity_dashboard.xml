@@ -61,7 +61,7 @@
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="310dp"
+                    android:layout_height="340dp"
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
