@@ -133,6 +133,8 @@ Log.i("check","on create")
         val view1: View = factory.inflate(R.layout.activity_details_page, null)
         var ft_img=view1.findViewById<ImageView>(R.id.ft_img)
         // var ft_name=view1.findViewById<TextView>(R.id.ft_name)
+        var ft_desc=view1.findViewById<TextView>(R.id.ft_desc)
+        ft_desc.text="";
         var bt_ok=view1.findViewById<TextView>(R.id.button_okk)
         bt_ok.text="Confirm for test?\n"
         bt_ok.setOnClickListener {

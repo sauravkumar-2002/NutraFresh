@@ -37,33 +37,43 @@
                 android:background="#F4F4F4"
                 android:orientation="vertical">
                 <TextView
+                    android:id="@+id/ft_fresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This item will remain fresh for 10 days"
+                    android:layout_gravity="left"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="18sp" />
+                <TextView
                     android:id="@+id/ft_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lorem.....epsum....................\n.........................."
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"
+                    android:text="An orange is a fruit of various citrus species in the family Rutaceae.\nOrange flesh is 87% water, 12% carbohydrates, 1% protein, and contains negligible fat (see table). As a 100 gram reference amount, orange flesh provides 47 calories, and is a rich source of vitamin C, providing 64% of the Daily Value. No other micronutrients are present in significant amounts"
+                    android:layout_gravity="left"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/poppins"
                     android:textSize="18sp" />
-
 
             </LinearLayout>
             <TextView
                 android:id="@+id/button_okk"
-                android:layout_marginTop="43dp"
+
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="center"
                 android:textSize="17dp"
                 android:textColor="@color/purple_700" />
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end|bottom"
+                android:layout_gravity="center"
+                android:text="Choose Another"
                 android:layout_margin="16dp"
-
                 android:contentDescription="Test another stuff"
-                android:src="@android:drawable/ic_menu_add"
+                android:backgroundTint="@color/text_color"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

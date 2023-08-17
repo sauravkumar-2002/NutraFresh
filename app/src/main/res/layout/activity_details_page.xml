@@ -43,7 +43,8 @@
                     android:id="@+id/ft_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
+                    android:text="An orange is a fruit of various citrus species in the family Rutaceae.\nOrange flesh is 87% water, 12% carbohydrates, 1% protein, and contains negligible fat (see table). As a 100 gram reference amount, orange flesh provides 47 calories, and is a rich source of vitamin C, providing 64% of the Daily Value. No other micronutrients are present in significant amounts"
+                    android:fontFamily="@font/poppins"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
